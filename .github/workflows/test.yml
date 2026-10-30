@@ -14,5 +14,7 @@ jobs:
       - name: Test ShellCheck Report
         uses: ./
         with:
-          path: "test/*.sh"
+          path: "test/**.sh"
           severity: style
+          # exclude-issues: "SC2006"
+          exclude-paths: "test/bad.sh"
